@@ -14,16 +14,20 @@ const backBtn = document.getElementById("backBtn");
 // FRIEND DATA
 const friends = {
   "AT-01": {
-  name: "Nimish",
-  intro: "We laughed until our stomachs hurt. Those days are unforgettable.",
-  note: "Forever thankful for our friendship.",
-  cards: [
-    { img: "images/friend1.jpg", text: "Birthday party fun" },
-    { img: "images/friend2.jpg", text: "Trip to the lake" },
-    { img: "images/friend3.jpg", text: "Random park day" }
-  ]
-}
-
+    name: "Friend One",
+    intro: "Some memories don’t need photos. They live in feelings.",
+    note: "You were never just a friend. You became family.",
+    cards: [
+      {
+        img: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70",
+        text: "That random day which became unforgettable."
+      },
+      {
+        img: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+        text: "Laughs that never needed a reason."
+      }
+    ]
+  },
   "AT-02": {
     name: "Friend Two",
     intro: "From strangers to a constant presence.",
@@ -69,7 +73,7 @@ submitBtn.addEventListener("click", () => {
     cardsContainer.innerHTML = "";
     data.cards.forEach(card => {
       const div = document.createElement("div");
-      div.className = "memory-card";
+      div.className = "memory-card reveal";
       div.innerHTML = `
         <img src="${card.img}">
         <p>${card.text}</p>
@@ -82,5 +86,18 @@ submitBtn.addEventListener("click", () => {
     errorMsg.textContent = "Invalid code. Try again.";
   }
 });
+function revealOnScroll() {
+  const reveals = document.querySelectorAll(".reveal");
 
+  reveals.forEach(el => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+    const elementVisible = 100;
 
+    if (elementTop < windowHeight - elementVisible) {
+      el.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
