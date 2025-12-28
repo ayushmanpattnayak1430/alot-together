@@ -1,5 +1,9 @@
 const openModal = document.getElementById("openModal");
 const modal = document.getElementById("memoryModal");
+
+openModal.addEventListener("click", () => {
+  modal.style.display = "flex";
+});
 const closeModal = document.getElementById("closeModal");
 const submitBtn = document.querySelector(".submit-btn");
 const errorMsg = document.getElementById("errorMsg");
@@ -101,3 +105,4 @@ function revealOnScroll() {
 }
 
 window.addEventListener("scroll", revealOnScroll);
+
