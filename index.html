@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alot Together</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <div class="container">
+    <h1 class="title">Alot Together</h1>
+
+    <p class="quote main-quote">
+      Built from moments we’ll never forget.
+    </p>
+
+    <p class="quote sub-quote">
+      “By chance we met, by choice we became friends.”
+    </p>
+
+    <button class="enter-btn" id="openModal">Enter Our Memories</button>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="memoryModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <h2>Enter Your Name Code</h2>
+      <input type="text" id="codeInput" placeholder="e.g. AT-01">
+      <button class="submit-btn">Unlock</button>
+      <p class="error-msg" id="errorMsg"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+<!-- Personal Memory Section -->
+<div class="personal-section" id="personalSection">
+  <h2 id="friendName"></h2>
+
+  <p class="personal-memory" id="friendMemory"></p>
+
+  <div class="cards-container" id="cardsContainer">
+    <!-- Memory cards will be added dynamically -->
+  </div>
+
+  <div class="note-box" id="friendNote"></div>
+
+  <button class="back-btn" id="backBtn">Back to Home</button>
+</div>
+
+</body>
+</html>
