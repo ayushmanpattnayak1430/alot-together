@@ -14,7 +14,7 @@ const backBtn = document.getElementById("backBtn");
 // FRIEND DATA: personalize names, notes, cards here
 const friends = {
   "AT-01": {
-    name: "Ayushman",
+    name: "Nimish",
     intro: "Some memories don’t need photos. They live in laughs, late talks, and shared silences.",
     note: "You were never just a friend. You became family.",
     cards: [
@@ -82,3 +82,4 @@ backBtn.addEventListener("click", () => {
   personalSection.style.display = "none";
   document.querySelector(".container").style.display = "flex";
 });
+
