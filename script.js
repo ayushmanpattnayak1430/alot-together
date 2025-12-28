@@ -14,12 +14,12 @@ const backBtn = document.getElementById("backBtn");
 // FRIEND DATA
 const friends = {
   "AT-01": {
-    name: "Friend One",
+    name: "Nimish",
     intro: "Some memories don’t need photos. They live in feelings.",
     note: "You were never just a friend. You became family.",
     cards: [
       {
-        img: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70",
+        img: "images/friend1.jpg",
         text: "That random day which became unforgettable."
       },
       {
@@ -86,3 +86,4 @@ submitBtn.addEventListener("click", () => {
     errorMsg.textContent = "Invalid code. Try again.";
   }
 });
+
